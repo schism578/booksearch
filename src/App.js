@@ -58,11 +58,12 @@ class App extends React.Component {
         if(data.totalItems === 0) throw new Error('No books found')
 
         const aBooks = data.items.map( book => {
-          const {title,authors,description,imageLinks,infoLink} = book.volumeInfo
+          const {title,author,description,imageLinks} = book.volumeInfo
           const {saleability,retailPrice} = book.saleInfo
+          const infoLink = book.infoLink
           return {
             title: title,
-            author: authors,
+            author: author,
             description: description,
             thumbnail_URL: imageLinks.thumbnail,
             info_link: infoLink,
@@ -94,7 +95,7 @@ class App extends React.Component {
                   author= {book.author}
                   description={book.description}
                   thumbnail_URL={book.thumbnail_URL}
-                  info_link={book.buyLink}
+                  info_link={book.info_link}
                   saleability= {book.saleability}
                   price= {book.price}
         />

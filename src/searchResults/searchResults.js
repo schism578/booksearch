@@ -4,12 +4,13 @@ import './searchResults.css';
 export default class SearchResults extends React.Component {
 
     render() {
-        
-        let authors;
-        if(this.props.authors === undefined){
-            authors = 'No Authors';
+        console.log(this.props.author)
+        console.log(this.props.authors)
+        let author;
+        if(this.props.author === undefined){
+            author = 'No Authors';
         } else{
-            authors = this.props.authors.join(', ');
+            author = this.props.author.join(', ');
         }
            
         let saleability = this.props.saleability;
@@ -22,7 +23,7 @@ export default class SearchResults extends React.Component {
                             <img src={this.props.thumbnail_URL} className='results-image' alt='{this.props.title} book cover' />
                             </a>
                         <div>
-                            <h3>Authors: {this.props.authors}</h3>
+                            <h3>Authors: {author}</h3>
                             <h4>Price: Free</h4>
                             {this.props.description}
                         </div>
@@ -43,7 +44,7 @@ export default class SearchResults extends React.Component {
                                 <img src={this.props.thumbnail_URL} className='results-image' alt='{this.props.title} book cover' />
                                 </a>
                             <div>
-                                <h3>Authors: {authors}</h3>
+                                <h3>Authors: {author}</h3>
                                 {priceTag}
                                 {this.props.description}
                             </div>
