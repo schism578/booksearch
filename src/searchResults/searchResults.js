@@ -2,12 +2,13 @@ import React from 'react';
 import './searchResults.css';
 
 export default class SearchResults extends React.Component {
-    
-    render() {
-        const url = this.props.infoLink;
+    /*url = this.props.infoLink;
         handleImgClick(url) {
             window.location.assign(url)
-        }
+        }*/
+
+    render() {
+        
 
         let author;
         if(this.props.author === undefined){
@@ -23,7 +24,7 @@ export default class SearchResults extends React.Component {
                 <div className='results-content'>   
                     <li>
                         <h2>{this.props.title}</h2> 
-                            <img onClick={handleImgClick(this.props.infoLink)} src={this.props.thumbnail_URL} 
+                            <img /*onClick={this.handleImgClick(this.url)}*/ src={this.props.thumbnail_URL} 
                                 className='results-image' alt='{this.props.title} book cover' />
                         <div>
                             <h3>Authors: {author}</h3>
@@ -43,7 +44,7 @@ export default class SearchResults extends React.Component {
                         <div className='results-content'>    
                             <li>
                                 <h2>{this.props.title}</h2>
-                                <img onClick={handleImgClick(this.props.infoLink)} src={this.props.thumbnail_URL} 
+                                <img /*onClick={this.handleImgClick(this.url)}*/ src={this.props.thumbnail_URL} 
                                     className='results-image' alt='{this.props.title} book cover' />
                             <div>
                                 <h3>Authors: {author}</h3>
