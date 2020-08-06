@@ -1,0 +1,6 @@
+.results-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+}
+

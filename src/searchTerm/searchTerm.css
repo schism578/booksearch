@@ -1,0 +1,27 @@
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.search-row {
+    height: 5vh;
+    text-align: center;
+    padding-top: 7px;
+    background-color: gray;
+}
+
+.search-bar {
+    background-color: khaki;
+}
+
+.search-parameters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    height: 5vh;
+    padding-top: 7px;
+    background-color: lightgray;
+}
+
